@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "ffmpeg-static",
-  "version": "5.2.0",
+  "name": "latest-ffmpeg-static",
+  "version": "7.0.0",
   "description": "ffmpeg & ffprobe binaries for macOS, Linux and Windows",
   "workspaces": [
     "packages/ffmpeg-static",
@@ -40,7 +40,17 @@
     "binaries",
     "mac",
     "linux",
-    "windows"
+    "windows",
+    "ffmpeg-static-7",
+    "ffprobe-static-7",
+    "ffmpeg-static-7.0",
+    "ffprobe-static-7.0",
+    "ffmpeg-static-7.0.0",
+    "ffmpeg-static-latest",
+    "ffprobe-static-latest",
+    "ffmpeg-static-electron",
+    "ffprobe-static-electron",
+    "ffmpeg-static-electron-7"
   ],
   "authors": [
     "Eugene Ware <eugene@noblesamurai.com>",
