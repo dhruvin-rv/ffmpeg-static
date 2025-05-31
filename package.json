@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "latest-ffmpeg-static",
+  "name": "ffmpeg-static",
   "version": "7.0.0",
   "description": "ffmpeg & ffprobe binaries for macOS, Linux and Windows",
   "workspaces": [
@@ -53,12 +53,10 @@
     "ffmpeg-static-electron-7"
   ],
   "authors": [
-    "Eugene Ware <eugene@noblesamurai.com>",
-    "Jannis R <mail@jannisr.de>"
+    "Dhruvin Vaghasiya <dhruvinvaghasiya11@gmail.com>"
   ],
   "contributors": [
-    "Thefrank (https://github.com/Thefrank)",
-    "Emil Sivervik <emil@sivervik.com>"
+    "Dhruvin Vaghasiya <dhruvinvaghasiya11@gmail.com>"
   ],
   "license": "GPL-3.0-or-later",
   "bugs": {
