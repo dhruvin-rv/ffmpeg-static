@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e -u -o pipefail
+# set -e -u -o pipefail
+set -x
 cd $(dirname $0)
 
 set +e
@@ -62,12 +63,19 @@ mv ../bin/ffprobe.exe ../bin/ffprobe-win32-ia32
 echo 'linux x64'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz' linux-x64.tar.xz
+
 echo '  extracting'
-xzcat linux-x64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg' '*/ffprobe'
-mv ../bin/ffmpeg ../bin/ffmpeg-linux-x64
-mv ../bin/ffprobe ../bin/ffprobe-linux-x64
-xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-x64.LICENSE
-xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-x64.README
+tmpdir=$(mktemp -d)
+xzcat linux-x64.tar.xz | $tar_exec -x -C "$tmpdir"
+
+# Move binaries
+mv "$tmpdir"/*/ffmpeg ../bin/ffmpeg-linux-x64
+mv "$tmpdir"/*/ffprobe ../bin/ffprobe-linux-x64
+
+# Extract LICENSE and README if GNU tar is used
+xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' > ../bin/linux-x64.LICENSE
+xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' > ../bin/linux-x64.README
+
 
 echo 'linux ia32'
 echo '  downloading from johnvansickle.com'
