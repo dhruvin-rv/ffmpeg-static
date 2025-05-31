@@ -2,7 +2,7 @@
 
 Static **[ffmpeg](https://ffmpeg.org) binaries for macOS, Linux, Windows.**
 
-Supports macOS (64-bit and arm64), Linux (32 and 64-bit, armhf, arm64), Windows (32 and 64-bit). [The ffmpeg version currently used is `6.0`.](https://github.com/eugeneware/ffmpeg-static/releases/tag/b6.0)
+Supports macOS (64-bit and arm64), Linux (32 and 64-bit, armhf, arm64), Windows (32 and 64-bit). [The ffmpeg version currently used is `6.0`.](https://github.com/dhruvin-rv/ffmpeg-static/releases/tag/b6.0)
 
 [![npm version](https://img.shields.io/npm/v/ffmpeg-static.svg)](https://www.npmjs.com/package/ffmpeg-static)
 ![minimum Node.js version](https://img.shields.io/node/v/ffmpeg-static.svg)
@@ -17,11 +17,11 @@ Also check out [`node-ffmpeg-installer`](https://github.com/kribblo/node-ffmpeg-
 $ npm install ffmpeg-static
 ```
 
-*Note:* During installation, it will download the appropriate `ffmpeg` binary from the [`b6.0` GitHub release](https://github.com/eugeneware/ffmpeg-static/releases/tag/b6.0). Use and distribution of the binary releases of `ffmpeg` are covered by their respective license.
+*Note:* During installation, it will download the appropriate `ffmpeg` binary from the [`b6.0` GitHub release](https://github.com/dhruvin-rv/ffmpeg-static/releases/tag/b6.0). Use and distribution of the binary releases of `ffmpeg` are covered by their respective license.
 
 ### Custom binaries url
 
-By default, the `ffmpeg` binary will get downloaded from `https://github.com/eugeneware/ffmpeg-static/releases/download`. To customise this, e.g. when using a mirror, set the `FFMPEG_BINARIES_URL` environment variable.
+By default, the `ffmpeg` binary will get downloaded from `https://github.com/dhruvin-rv/ffmpeg-static/releases/download`. To customise this, e.g. when using a mirror, set the `FFMPEG_BINARIES_URL` environment variable.
 
 ```shell
 export FFMPEG_BINARIES_URL=https://cdn.npmmirror.com/binaries/ffmpeg-static
@@ -30,7 +30,7 @@ npm install ffmpeg-static
 
 ### Electron & other cross-platform packaging tools
 
-Because `ffmpeg-static` will download a binary specific to the OS/platform, you need to purge `node_modules` before (re-)packaging your app *for a different OS/platform* ([read more in #35](https://github.com/eugeneware/ffmpeg-static/issues/35#issuecomment-630225392)).
+Because `ffmpeg-static` will download a binary specific to the OS/platform, you need to purge `node_modules` before (re-)packaging your app *for a different OS/platform* ([read more in #35](https://github.com/dhruvin-rv/ffmpeg-static/issues/35#issuecomment-630225392)).
 
 ## Example Usage
 

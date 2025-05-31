@@ -1,11 +1,11 @@
 {
-	"private": true,
+  "private": true,
   "name": "ffmpeg-static",
   "version": "5.2.0",
   "description": "ffmpeg & ffprobe binaries for macOS, Linux and Windows",
   "workspaces": [
-  	"packages/ffmpeg-static",
-  	"packages/ffprobe-static"
+    "packages/ffmpeg-static",
+    "packages/ffprobe-static"
   ],
   "scripts": {
     "test": "node test.js",
@@ -16,20 +16,20 @@
   "ffmpeg-static": {
     "binary-path-env-var": "FFMPEG_BIN",
     "binary-release-tag-env-var": "FFMPEG_BINARY_RELEASE",
-    "binary-release-tag": "b6.0",
+    "binary-release-tag": "b7.0",
     "binaries-url-env-var": "FFMPEG_BINARIES_URL",
     "executable-base-name": "ffmpeg"
   },
   "ffprobe-static": {
     "binary-path-env-var": "FFPROBE_BIN",
     "binary-release-tag-env-var": "FFPROBE_BINARY_RELEASE",
-    "binary-release-tag": "b6.0",
+    "binary-release-tag": "b7.0",
     "binaries-url-env-var": "FFPROBE_BINARIES_URL",
     "executable-base-name": "ffprobe"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eugeneware/ffmpeg-static"
+    "url": "https://github.com/dhruvin-rv/ffmpeg-static"
   },
   "keywords": [
     "ffmpeg",
@@ -52,7 +52,7 @@
   ],
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/eugeneware/ffmpeg-static/issues"
+    "url": "https://github.com/dhruvin-rv/ffmpeg-static/issues"
   },
   "engines": {
     "node": ">=16"
